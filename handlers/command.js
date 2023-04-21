@@ -19,6 +19,6 @@ module.exports = (client) => {
         });
         console.log(`${commandos} Comandos cargados`)
     } catch (error) {
-        console.log(e.bgRed)
+        console.log(error)
     }
 };

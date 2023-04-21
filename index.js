@@ -9,7 +9,7 @@ bot.aliases = new Discord.Collection();
 function requestHandlers() {
     ["command", "events"].forEach(handler => {
         try {
-            require(`./handlers/${handler}`)(client, Discord)
+            require(`./handlers/${handler}`)(bot, Discord)
         } catch (error) {
             console.warn(error)
         }
