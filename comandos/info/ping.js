@@ -3,6 +3,6 @@ module.exports = {
     aliases: ["latencia", "ms"],
     desc: "Sirve para ver la latencia del bot",
     run: async (client, message, args, prefix) => {
-        message.reply(`Pong! El ping del Bot es de ${client.ws.ping}ms`)
+        message.reply(`Pong! Mi ping actual es de ${client.ws.ping}ms`)
     }
 }

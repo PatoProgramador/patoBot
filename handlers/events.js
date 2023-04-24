@@ -6,10 +6,10 @@ module.exports = async (client) => {
     try {
         try {
             console.log('Cargando los eventos...')
-        } catch (error) {}
+        } catch {}
         let cantidad = 0;
         const cargar_dir = (dir) => {
-            const archivos_eventos = fs.readFileSync(`../eventos/${dir}`).filter((file) => file.endsWith('.js'))
+            const archivos_eventos = fs.readdirSync(`./eventos/${dir}`).filter((file) => file.endsWith('.js'));
             for(const archivo of archivos_eventos) {
                 try {
                    const evento = require(`../eventos/${dir}/${archivo}`) 

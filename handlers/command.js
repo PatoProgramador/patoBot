@@ -14,7 +14,7 @@ module.exports = (client) => {
                     console.log(`COMANDO [/${folder}/${file}]`, 'error => el comando no está configurado')
                     continue;
                 }
-                if(command.aliases && Array.isArray(command.aliases)) command.aliases.forEach((alias) => client.set(alias, command.name))
+                if(command.aliases && Array.isArray(command.aliases)) command.aliases.forEach((alias) => client.commands.set(alias, command.name))
             }
         });
         console.log(`${commandos} Comandos cargados`)
