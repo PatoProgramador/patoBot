@@ -1,4 +1,4 @@
-module.exports = {
+module.exports  = {
     name: "ping",
     aliases: ["latencia", "ms"],
     desc: "Sirve para ver la latencia del bot",
