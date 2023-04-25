@@ -4,6 +4,7 @@ const { asegurar } = require('../../handlers/functions');
 
 module.exports = async (client, message) => {
     if (!message.guild || !message.channel || message.author.bot) return;
+
     let data = await asegurar(serverSchema, "guildID", message.guild.id, {
         guildID: message.guild.id,
         prefijo: process.env.PREFIX
@@ -24,7 +25,7 @@ module.exports = async (client, message) => {
   
     try {
       // Ejecutamos el comando y manejamos cualquier posible error.
-      await command.execute(client, message, args);
+      await command.run(client, message, args, data.prefijo);
     } catch (error) {
       console.error(error);
       message.reply('¡Ups! Ha ocurrido un error al ejecutar este comando.');
