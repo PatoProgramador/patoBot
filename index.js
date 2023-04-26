@@ -19,7 +19,6 @@ requestHandlers();
 client
     .login(process.env.DS_BOT_TOKEN)
     .then(() => {
-        console.log(`El ${client.user.username} se ha iniciado :)`)
         client.user.setActivity('existir');
     })
     .catch((err) => console.log(err));
