@@ -3,5 +3,18 @@
 
 # misc
 .env
+.venv/
+venv/
+ENV/
 
 .venv
+
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+*.egg-info/
+.eggs/
+
+.DS_Store
