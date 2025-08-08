@@ -9,3 +9,6 @@ async def on_ready():
 async def ping(ctx):
     await ctx.send("🏓 Pong!")
 
+@bot.command()
+async def pong(ctx):
+    await ctx.send("Solo puedes hacer ping crack 😒")

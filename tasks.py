@@ -15,7 +15,7 @@ def run_pato_bot_pool(c):
             executor.submit(run_pato_bot, c)
 
     except KeyboardInterrupt:
-        logger.warning("Interrupted with KeyboardInterrupt (CTRL+C). Shutting down consumer processes...")
+        logger.warning("Shutting down...")
 
 
 if __name__ == '__main__':
