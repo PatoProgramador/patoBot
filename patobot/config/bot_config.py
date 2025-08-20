@@ -7,15 +7,17 @@ if not discord.opus.is_loaded():
         "/opt/homebrew/lib/libopus.dylib",
         "/usr/local/lib/libopus.dylib",
         "libopus.so",
-        "opus.dll"
+         "opus.dll",
+        "C:/Windows/System32/libopus.dll",
+        "C:/Windows/SysWOW64/ibopus.dll"
     ]
     for path in possible_paths:
         if os.path.exists(path):
             discord.opus.load_opus(path)
-            print(f"✅ Opus cargado desde {path}")
+            print(f" Opus cargado desde {path}")
             break
     else:
-        print("❌ No se encontró libopus. Instálalo con 'brew install opus' o 'apt install libopus-dev'.")
+        print(" No se encontró libopus. Instálalo con 'brew install opus' o 'apt install libopus-dev'.")
 
 
 
